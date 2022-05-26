@@ -47,3 +47,9 @@ variable "neptune-dbname" {
   description = "Name of the Neptune graph database"
   default     = "neptunedb1"
 }
+
+variable "neptune-dbname-test" {
+  type        = "string"
+  description = "Name of the Neptune graph database"
+  default     = "neptunedb1"
+}
