@@ -66,6 +66,9 @@ resource "aws_s3_bucket" "financials" {
 
 resource "aws_s3_bucket" "financials_log_bucket" {
   bucket = "financials-log-bucket"
+  tags = {
+    yor_trace = "865ce891-3a95-4df3-b22a-3e653e4e74dd"
+  }
 }
 
 resource "aws_s3_bucket_logging" "financials" {
@@ -82,7 +85,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "financials" {
 
   rule {
     apply_server_side_encryption_by_default {
-      sse_algorithm     = "AES256"
+      sse_algorithm = "AES256"
     }
   }
 }
@@ -93,7 +96,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "financials" {
 
   rule {
     apply_server_side_encryption_by_default {
-      sse_algorithm     = "aws:kms"
+      sse_algorithm = "aws:kms"
     }
   }
 }
