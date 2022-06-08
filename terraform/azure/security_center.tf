@@ -1,5 +1,5 @@
 resource azurerm_security_center_subscription_pricing "pricing" {
-  tier = "Free"
+  tier = "Standard"
 }
 
 resource azurerm_security_center_contact "contact" {
