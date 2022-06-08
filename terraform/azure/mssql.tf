@@ -245,4 +245,5 @@ resource "azurerm_mssql_server_security_alert_policy" "alertpolicy7" {
   ]
   retention_days  = 20
   email_addresses = ["securityengineer@bridgecrew.io"]
+  email_account_admins = true
 }
