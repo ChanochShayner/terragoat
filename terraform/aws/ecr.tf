@@ -35,7 +35,7 @@ resource null_resource "push_image" {
 
 resource aws_ecr_repository "repository-new" {
   name                 = "${local.resource_prefix.value}-repository"
-  image_tag_mutability = "MUTABLE"
+  image_tag_mutability = "IMMUTABLE"
 
   tags = merge({
     Name = "${local.resource_prefix.value}-repository"
